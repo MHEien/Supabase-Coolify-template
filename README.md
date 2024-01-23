@@ -12,20 +12,22 @@ To deploy Supabase on Coolify, follow these steps:
     ```bash
     git clone https://github.com/MHEien/Supabase-Coolify-template.git
     ```
-3. **Create a New Project in Coolify**
+2. **Create a New Project in Coolify**
     - Choose installation by Docker-compose.
     - Copy & Paste the contents of `docker-compose.yml` from this repo into Coolify and save. **DO NOT DEPLOY YET!**
-4. ***Move the volumes folder to the location of the docker-compose***
+3. ***Move the volumes folder to the location of the docker-compose***
     ```bash
     cd path/to/supabase/docker
     cp -r ./volumes /data/coolify/services/<PROJECTID>/
     ```
 
-2. **In Coolify**
+4. **In Coolify**
     - Enter developer mode in Environment variables and paste your `.env`.
     - In Storage, verify that the contents of the `./volumes` matches the content from this repo. Copy & Paste where missing.
+    - **Coolify does not mark directories by default, you must override this by checking the "Is Directory option".**
+    - **The directories are listed below.**
 
-3. **Configure Logs Explorer**
+5. **Configure Logs Explorer**
     If you want Logs Explorer to work, navigate to `./volumes/logs/vector.yml` and edit the following section:
     ```yaml
     route:
@@ -40,7 +42,7 @@ To deploy Supabase on Coolify, follow these steps:
     Change the required environment variables.
 
 
-4. **Mark as Directory in Storages Section**
+6. **Mark as Directory in Storages Section**
     ```
     Storage: /data/coolify/services/y48kg0c/volumes/storage
     Imgproxy: /data/coolify/services/y48kg0c/volumes/storage
@@ -48,7 +50,7 @@ To deploy Supabase on Coolify, follow these steps:
     DB: /data/coolify/services/y48kg0c/volumes/db/data
     ```
 
-5. **Populate Files in Coolify Before Deployment**
+7. **Populate Files in Coolify Before Deployment**
     - Files:
         ```
         Kong: /data/coolify/services/y48kg0c/volumes/api/kong.yml
@@ -61,7 +63,7 @@ To deploy Supabase on Coolify, follow these steps:
         /data/coolify/services/y48kg0c/volumes/logs/vector.yml
         ```
 
-6. **Now You Can Deploy!**
+8. **Now You Can Deploy!**
 
 ## Notes
 
