@@ -1,6 +1,6 @@
 # Supabase x Coolify
 
-This repository contains the necessary files to effortlessly deploy Supabase on Coolify, a platform that simplifies application creation with a one-click setup. Coolify also handles domain forwarding for seamless integration.
+
 
 ## Deployment Steps
 
