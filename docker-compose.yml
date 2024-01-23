@@ -273,7 +273,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      - LOGFLARE_NODE_HOST=$SERVICE_FQDN_KONG
+      - LOGFLARE_NODE_HOST=0.0.0.0
       - DB_USERNAME=supabase_admin
       - DB_DATABASE=${POSTGRES_DB}
       - DB_HOSTNAME=${POSTGRES_HOST}
