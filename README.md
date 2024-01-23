@@ -7,13 +7,23 @@ Get Coolify at https://coolify.io/
 
 To deploy Supabase on Coolify, follow these steps:
 
-1. **Create a New Project in Coolify**
+1. **Clone the repo**
+   - The content of the files are mostly the same as the original supabase files, except for a few changes to fit Coolify.
+    ```bash
+    git clone https://github.com/MHEien/Supabase-Coolify-template.git
+    ```
+3. **Create a New Project in Coolify**
     - Choose installation by Docker-compose.
+    - Copy & Paste the contents of `docker-compose.yml` from this repo into Coolify and save. **DO NOT DEPLOY YET!**
+4. ***Move the volumes folder to the location of the docker-compose***
+    ```bash
+    cd path/to/supabase/docker
+    cp -r ./volumes /data/coolify/services/<PROJECTID>/
+    ```
 
 2. **In Coolify**
-    - Copy & Paste the contents of `docker-compose.yml` from this repo into Coolify and save. **DO NOT DEPLOY YET!**
     - Enter developer mode in Environment variables and paste your `.env`.
-    - In Storage, populate the contents of the `./volumes` from this repo. Copy & Paste contents from files in the volumes, and folders should be checked with "Is a folder".
+    - In Storage, verify that the contents of the `./volumes` matches the content from this repo. Copy & Paste where missing.
 
 3. **Configure Logs Explorer**
     If you want Logs Explorer to work, navigate to `./volumes/logs/vector.yml` and edit the following section:
