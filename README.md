@@ -23,7 +23,7 @@ To deploy Supabase on Coolify, follow these steps:
     If you want Logs Explorer to work, navigate to `./volumes/logs/vector.yml` and edit the following section:
     ```yaml
     route:
-      kong: '.appname == "kong-y48kg0c"' #Replace "y48kg0c" with your project ID for all of the routes
+      kong: '.appname == "kong-y48kg0c"' #Replace "y48kg0c" with your Coolify project ID for all of the routes
       auth: '.appname == "auth-y48kg0c"' 
       rest: '.appname == "rest-y48kg0c"' 
       realtime: '.appname == "realtime-y48kg0c"' 
