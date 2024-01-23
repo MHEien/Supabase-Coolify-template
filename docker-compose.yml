@@ -309,7 +309,6 @@ services:
     ports:
       - "${POSTGRES_PORT}:${POSTGRES_PORT}"
     environment:
-      - SERVICE_FQDN_AUTH
       - POSTGRES_HOST=/var/run/postgresql
       - "PGPORT=${POSTGRES_PORT}"
       - "POSTGRES_PORT=${POSTGRES_PORT}"
