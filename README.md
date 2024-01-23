@@ -26,6 +26,7 @@ To deploy Supabase on Coolify, follow these steps:
     - In Storage, verify that the contents of the `./volumes` matches the content from this repo. Copy & Paste where missing.
     - **Coolify does not mark directories by default, you must override this by checking the "Is Directory option".**
     - **The directories are listed below.**
+    - **It seems that some times, even when the content in storage is populated, it fails to load. So I recommend clicking save on each one before deploying to verify they save.**
 
 5. **Configure Logs Explorer**
     If you want Logs Explorer to work, navigate to `./volumes/logs/vector.yml` and edit the following section:
