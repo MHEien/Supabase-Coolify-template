@@ -1,5 +1,6 @@
 # Supabase x Coolify
-
+Get Supabase at https://supabase.com/
+Get Coolify at https://coolify.io/
 
 
 ## Deployment Steps
